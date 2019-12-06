@@ -3,23 +3,18 @@
   <component name="ContentModelStore">
     <e p="C:\Dev\AdventOfCode\AdventOfCode19" t="IncludeRecursive">
       <e p="AdventOfCode19.fsproj" t="IncludeRecursive" />
+      <e p="AdventOfCode19.sln" t="IncludeFlat" />
       <e p="bin" t="ExcludeRecursive" />
       <e p="days" t="Include">
+        <e p="day1.txt" t="Include" />
         <e p="DayOne.fs" t="Include" />
-        <e p="DayThree.fs" t="Include" />
         <e p="DayTwo.fs" t="Include" />
       </e>
-      <e p="input" t="Include">
-        <e p="day1.txt" t="Include" />
-        <e p="day2.txt" t="Include" />
-        <e p="day3.txt" t="Include" />
-      </e>
       <e p="obj" t="ExcludeRecursive" />
-      <e p="output" t="Include" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="Program.fs" t="Include" />
     </e>
     <e p="C:\Users\rafae\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\rafae\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_.19.00" t="ExcludeRecursive" />
+    <e p="C:\Users\rafae\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_AdventOfCode19.1998240028.00" t="ExcludeRecursive" />
   </component>
 </project>

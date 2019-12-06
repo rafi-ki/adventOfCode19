@@ -8,11 +8,15 @@
     <ItemGroup>
 		<Compile Include="days\DayOne.fs" />
 		<Compile Include="days\DayTwo.fs" />
+		<Compile Include="days\DayThree.fs" />
         <Compile Include="Program.fs" />
         <Content Include="input\day1.txt">
           <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>
         <Content Include="input\day2.txt">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="input\day3.txt">
           <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>
         <Folder Include="output" />
