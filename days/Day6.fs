@@ -7,13 +7,12 @@ type object = { Id: string; OrbitedBy: object list; Depth: int }
 let createObjectRaw id depth = { Id = id; OrbitedBy = List.empty; Depth = depth }
 
 let rec createObject object (values: (string * string) list) =
-    let possibleOrbiter = values |> List.filter (fun x -> fst(x) = object.Id)
-    if List.length possibleOrbiter = 0 then object
-    else
-        let objectStrings = possibleOrbiter |> List.map (fun x -> snd(x))
-        let objects = objectStrings |> List.map (fun x -> createObjectRaw x (object.Depth + 1))
-        let orbitedBy = objects |> List.map (fun x -> createObject x values)
-        { object with OrbitedBy = orbitedBy }
+    let orbitedBy = values
+                        |> List.filter (fun x -> fst(x) = object.Id)
+                        |> List.map (fun x -> snd(x))
+                        |> List.map (fun x -> createObjectRaw x (object.Depth + 1))
+                        |> List.map (fun x -> createObject x values) 
+    { object with OrbitedBy = orbitedBy }
         
 let rec getTotalDepth object =
     let innerDepth = object.OrbitedBy |> List.sumBy getTotalDepth
