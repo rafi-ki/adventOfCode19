@@ -7,6 +7,8 @@
       <e p="days" t="Include">
         <e p="Day5.fs" t="Include" />
         <e p="Day6.fs" t="Include" />
+        <e p="Day7.fs" t="Include" />
+        <e p="Day8.fs" t="Include" />
         <e p="DayFour.fs" t="Include" />
         <e p="DayOne.fs" t="Include" />
         <e p="DayThree.fs" t="Include" />
@@ -17,6 +19,7 @@
         <e p="day2.txt" t="Include" />
         <e p="day3.txt" t="Include" />
         <e p="day6.txt" t="Include" />
+        <e p="day8.txt" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
