@@ -30,4 +30,25 @@ let partOne =
     let minZeroLayer = layers |> Array.minBy countNumber0
     let numberOfOnes = countNumber1 minZeroLayer
     let numberOfTwos = countNumber2 minZeroLayer
-    numberOfOnes * numberOfTwos |> string 
+    numberOfOnes * numberOfTwos |> string
+
+let partTwo =
+    let readInput = System.IO.File.ReadAllText "input/day8.txt"
+    let input = Seq.toList readInput |> Seq.map charToInt |> Array.ofSeq
+    let layers = input
+                |> Array.chunkBySize width
+                |> Array.chunkBySize height
+    
+    let mutable combined = layers.[0]
+    for i in [1..(Array.length layers)-1] do
+        let layer = layers.[i]
+        for j in [0..(Array.length layer)-1] do
+            let line = layer.[j]
+            for k in [0..(Array.length line)-1] do
+                let value = combined.[j].[k] 
+                if value = 2 then combined.[j].[k] <- layer.[j].[k]
+                
+    let result = combined |> Array.reduce (fun acc item -> Array.append acc item)
+    let stringResult = result |> Array.map string
+    let r = Array.fold (fun acc item -> acc + item) "" stringResult
+    sprintf "%A" r

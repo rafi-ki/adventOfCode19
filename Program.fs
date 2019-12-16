@@ -2,7 +2,7 @@
 module Program
 open System
 
-let printDay = printfn "%s"
+let print = printfn "%s"
 
 [<EntryPoint>]
 let main argv =
@@ -18,7 +18,8 @@ let main argv =
 //    Day6.partOne |> printDay
 //    Day6.partTwo |> printDay
 //    Day7.partOne |> printDay
-    Day8.partOne |> printDay
+//    Day8.partOne |> printDay
+    Day8.partTwo |> print
     
     Console.ReadLine() |> ignore
     0
