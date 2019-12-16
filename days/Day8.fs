@@ -12,19 +12,13 @@ let height = 6
 let createLine v = Array.create v
 let createLayer v = Array.create v
 
-
-
-let numberOfZeroes (input: int[][]) =
-    let nOfZ v = Array.sumBy (fun x -> if x = 0 then 1 else 0) v
-    input |> Array.sumBy (fun x -> nOfZ x)
-
-let numberOfOnes (input: int[][]) =
-    let nOfZ v = Array.sumBy (fun x -> if x = 1 then 1 else 0) v
-    input |> Array.sumBy (fun x -> nOfZ x)
+let countOfNumber (input: int[][]) number =
+    let nOfX v = Array.sumBy (fun x -> if x = number then 1 else 0) v
+    input |> Array.sumBy nOfX
     
-let numberOfTwos (input: int[][]) =
-    let nOfZ v = Array.sumBy (fun x -> if x = 2 then 1 else 0) v
-    input |> Array.sumBy (fun x -> nOfZ x)
+let countNumber0 input = countOfNumber input 0
+let countNumber1 input = countOfNumber input 1
+let countNumber2 input = countOfNumber input 2
 
 let partOne =
     let readInput = System.IO.File.ReadAllText "input/day8.txt"
@@ -33,7 +27,7 @@ let partOne =
                 |> Array.chunkBySize width
                 |> Array.chunkBySize height
                 
-    let minZeroLayer = layers |> Array.minBy numberOfZeroes
-    let numberOfOnes = numberOfOnes minZeroLayer
-    let numberOfTwos = numberOfTwos minZeroLayer
+    let minZeroLayer = layers |> Array.minBy countNumber0
+    let numberOfOnes = countNumber1 minZeroLayer
+    let numberOfTwos = countNumber2 minZeroLayer
     numberOfOnes * numberOfTwos |> string 

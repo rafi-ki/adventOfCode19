@@ -15,7 +15,10 @@ let main argv =
 //    DayFour.partOne |> printDay
 //    DayFour.partTwo |> printDay
 //    Day5.partOne |> printDay
-    Day6.partOne |> printDay
+//    Day6.partOne |> printDay
+//    Day6.partTwo |> printDay
+//    Day7.partOne |> printDay
+    Day8.partOne |> printDay
     
     Console.ReadLine() |> ignore
     0
