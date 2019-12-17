@@ -25,7 +25,7 @@
       <e p="packages" t="ExcludeRecursive" />
       <e p="Program.fs" t="Include" />
     </e>
-    <e p="C:\Users\rafae\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\rafae\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_.19.00" t="ExcludeRecursive" />
+    <e p="C:\Users\rafae\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\rafae\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_.19.00" t="ExcludeRecursive" />
   </component>
 </project>

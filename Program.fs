@@ -20,6 +20,4 @@ let main argv =
 //    Day7.partOne |> printDay
 //    Day8.partOne |> printDay
     Day8.partTwo |> print
-    
-    Console.ReadLine() |> ignore
     0

@@ -1,5 +1,7 @@
 module Day8
 
+open System
+
 let inline charToInt c = int c - int '0'
 
 type Line = { Digits: int [] }
@@ -45,10 +47,13 @@ let partTwo =
         for j in [0..(Array.length layer)-1] do
             let line = layer.[j]
             for k in [0..(Array.length line)-1] do
-                let value = combined.[j].[k] 
-                if value = 2 then combined.[j].[k] <- layer.[j].[k]
-                
-    let result = combined |> Array.reduce (fun acc item -> Array.append acc item)
-    let stringResult = result |> Array.map string
-    let r = Array.fold (fun acc item -> acc + item) "" stringResult
-    sprintf "%A" r
+                if combined.[j].[k]  = 2 then combined.[j].[k] <- layer.[j].[k]
+    
+    let arrayToString arr = arr |> Array.map string |> Array.reduce (fun acc item -> acc + item)
+    let stringArrays = combined |> Array.map arrayToString
+    let stringResult = String.concat Environment.NewLine stringArrays
+//    let result = combined |> Array.reduce (fun acc item -> Array.append acc item)
+    
+//    let stringResult = result |> Array.map string
+//    let r = Array.fold (fun acc item -> acc + item) "" stringResult
+    sprintf "%A" stringResult
