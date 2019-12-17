@@ -19,5 +19,6 @@ let main argv =
 //    Day6.partTwo |> printDay
 //    Day7.partOne |> printDay
 //    Day8.partOne |> printDay
-    Day8.partTwo |> print
+//    Day8.partTwo |> print
+    Day10.partOne |> print
     0
